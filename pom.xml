@@ -75,4 +75,12 @@
         </plugins>
     </build>
 
+    <scm>
+        <url>https://github.com/navikt/eskattekortbestilling-schema</url>
+        <connection>scm:git:https://github.com/navikt/eskattekortbestilling-schema.git</connection>
+        <developerConnection>scm:git:https://github.com/navikt/eskattekortbestilling-schema.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+
 </project>
