@@ -4,7 +4,7 @@
 
     <groupId>no.nav.os.eskatt</groupId>
     <artifactId>eskattekortbestilling-schema</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
 
     <properties>
         <java.jdk.version>1.8</java.jdk.version>
@@ -87,7 +87,7 @@
         <url>https://github.com/navikt/eskattekortbestilling-schema</url>
         <connection>scm:git:https://github.com/navikt/eskattekortbestilling-schema.git</connection>
         <developerConnection>scm:git:https://github.com/navikt/eskattekortbestilling-schema.git</developerConnection>
-        <tag>eskattekortbestilling-schema-1.0</tag>
+        <tag>eskattekortbestilling-schema-1.0.2</tag>
     </scm>
 
     <distributionManagement>
