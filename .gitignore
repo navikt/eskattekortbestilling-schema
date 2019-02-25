@@ -1,0 +1,11 @@
+target/
+.idea/
+*.iml
+.metadata
+.classpath
+.settings/
+.project
+.tern-project
+*.log
+*.releaseBackup
+release.properties
