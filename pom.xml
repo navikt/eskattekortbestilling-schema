@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>no.nav.os.eskatt</groupId>
     <artifactId>eskattekortbestilling-schema</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
-        <maven.compiler.version>3.5.1</maven.compiler.version>
         <java.jdk.version>1.8</java.jdk.version>
-        <junit.version>4.12</junit.version>
-        <!-- Logging -->
+        <maven.compiler.version>3.5.1</maven.compiler.version>
+        <maven.release.version>2.5.3</maven.release.version>
         <jcl.slf4j.version>1.7.25</jcl.slf4j.version>
         <logback.version>1.2.3</logback.version>
+        <junit.version>4.12</junit.version>
     </properties>
 
     <dependencies>
@@ -52,6 +51,16 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven.release.version}</version>
+                <configuration>
+                    <preparationGoals>clean install</preparationGoals>
+                    <pushChanges>false</pushChanges>
+                    <localCheckout>true</localCheckout>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>2.3.1</version>
@@ -79,7 +88,7 @@
         <url>https://github.com/navikt/eskattekortbestilling-schema</url>
         <connection>scm:git:https://github.com/navikt/eskattekortbestilling-schema.git</connection>
         <developerConnection>scm:git:https://github.com/navikt/eskattekortbestilling-schema.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>eskattekortbestilling-schema-1.0</tag>
     </scm>
 
 
