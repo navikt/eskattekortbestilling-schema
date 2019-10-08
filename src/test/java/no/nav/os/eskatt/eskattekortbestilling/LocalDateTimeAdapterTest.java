@@ -10,7 +10,7 @@ public class LocalDateTimeAdapterTest {
 
     private LocalDateTimeAdapter adapter = new LocalDateTimeAdapter();
 
-    private static final LocalDateTime DATE = LocalDateTime.of(2017, 01, 01, 12, 15, 30);
+    private static final LocalDateTime DATE = LocalDateTime.of(2017, 1, 1, 12, 15, 30);
     private static final String DATE_AS_STRING = "2017-01-01T12:15:30";
 
     @Test
