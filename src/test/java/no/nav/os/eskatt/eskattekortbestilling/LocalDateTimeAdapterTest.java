@@ -14,13 +14,19 @@ public class LocalDateTimeAdapterTest {
     private static final String DATE_AS_STRING = "2017-01-01T12:15:30";
 
     @Test
-    public void skalKonvertereTilLocalDateTime() throws Exception {
+    public void skalKonvertereTilLocalDateTime() {
         LocalDateTime unmarshal = adapter.unmarshal(DATE_AS_STRING);
         Assert.assertThat(unmarshal, CoreMatchers.equalTo(DATE));
     }
 
     @Test
-    public void skalKonvertereTilString() throws Exception {
+    public void skalReturnereNullVedUgyldigDato() {
+        LocalDateTime time = adapter.unmarshal("IKKE_GYLDIG");
+        Assert.assertNull(time);
+    }
+
+    @Test
+    public void skalKonvertereTilString() {
         String marshal = adapter.marshal(DATE);
         Assert.assertThat(marshal, CoreMatchers.equalTo(DATE_AS_STRING));
     }

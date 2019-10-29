@@ -13,17 +13,17 @@ public class LocalDateTimeAdapter extends XmlAdapter<String,LocalDateTime> {
     private static final Logger LOGGER = LoggerFactory.getLogger(LocalDateTimeAdapter.class);
 
     @Override
-    public LocalDateTime unmarshal(String localDateTimeAsString) throws Exception {
+    public LocalDateTime unmarshal(String localDateTimeAsString) {
         try {
             return LocalDateTime.parse(localDateTimeAsString, DateTimeFormatter.ISO_DATE_TIME);
         } catch (DateTimeParseException e) {
-            LOGGER.error("Parsing av dato '{}' feilet!", localDateTimeAsString, e);
+            LOGGER.error("Parsing av dato '{}' feilet!", localDateTimeAsString);
             return null;
         }
     }
 
     @Override
-    public String marshal(LocalDateTime localDateTime) throws Exception {
+    public String marshal(LocalDateTime localDateTime) {
         return localDateTime != null ? localDateTime.format(DateTimeFormatter.ISO_DATE_TIME) : null;
     }
 }
