@@ -6,30 +6,20 @@
     <artifactId>eskattekortbestilling-schema</artifactId>
     <version>1.0.5-SNAPSHOT</version>
     <properties>
-        <java.jdk.version>1.8</java.jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <junit.version>4.12</junit.version>
         <maven.compiler.version>3.5.1</maven.compiler.version>
         <maven.release.version>2.5.3</maven.release.version>
-        <jcl.slf4j.version>1.7.25</jcl.slf4j.version>
-        <logback.version>1.2.3</logback.version>
-        <junit.version>4.12</junit.version>
+        <maven.jaxb2.version>2.3.1</maven.jaxb2.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${jcl.slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${jcl.slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -45,8 +35,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.version}</version>
                 <configuration>
-                    <source>${java.jdk.version}</source>
-                    <target>${java.jdk.version}</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -62,7 +52,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
-                <version>2.3.1</version>
+                <version>${maven.jaxb2.version}</version>
                 <executions>
                     <execution>
                         <id>xjc</id>
